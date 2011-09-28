@@ -3,4 +3,22 @@
 	<string name="hello">Hello World, EnvTrackingActivity!</string>
 	<string name="app_name">EnvTracking</string>
 	<string name="btn_label">EnvTracking</string>
+	<string name="dummy_text">This is a dummy text</string>
+
+	<string name="sensor_accelerometer">Accelerometer</string>
+	<string name="sensor_gravity">Gravity</string>
+	<string name="sensor_gyroscope">Gyroscope</string>
+	<string name="sensor_light">Light</string>
+	<string name="sensor_linear_acceleration">Linear Acceleration</string>
+	<string name="sensor_magnetic_field">Magnetic Field</string>
+	<string name="sensor_orientation">Orientation</string>
+	<string name="sensor_pressure">Pressure</string>
+	<string name="sensor_proximity">Proximity</string>
+	<string name="sensor_rotation_vector">Rotation vector</string>
+	<string name="sensor_temperature">Temperature</string>
+	<string name="button_cancel">Cancel</string>
+	<string name="button_save">Save</string>
+	<string name="no_sensors_available">No sensors available</string>
+
+
 </resources>

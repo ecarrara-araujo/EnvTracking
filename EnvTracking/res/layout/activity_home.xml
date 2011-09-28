@@ -8,10 +8,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	android:id="@+id/home_root" android:orientation="vertical"
 	android:layout_width="fill_parent" android:layout_height="fill_parent">
-	<fragment android:name="com.uint.envtracking.ui.DashboardFragment"
-		android:id="@+id/fragment_dashboard" android:layout_width="fill_parent"
+	
+	
+<!-- 	<fragment android:name="com.uint.envtracking.ui.DashboardFragment" -->
+<!-- 		android:id="@+id/fragment_dashboard" android:layout_width="fill_parent" -->
+<!-- 		android:layout_height="fill_parent" android:layout_weight="1" /> -->
+	<fragment android:name="com.uint.envtracking.ui.SensorsListFragment"
+		android:id="@+id/fragment_sensors_list" android:layout_width="fill_parent"
 		android:layout_height="fill_parent" android:layout_weight="1" />
-
 
 
 </LinearLayout>
