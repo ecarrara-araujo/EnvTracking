@@ -65,6 +65,12 @@ public class TrackingSessionDAO {
         return db.delete(Tables.TRACKING_SESSIONS, where, whereArgs);
     }
     
+    public static int deleteAllEntities(Context ctx) {
+        SQLiteDatabase db = getDatabase(ctx);
+        
+        return db.delete(Tables.TRACKING_SESSIONS, null, null); 
+    }
+    
     private static TrackingSession insertEntity(SQLiteDatabase db, TrackingSession entity) {
         ContentValues values = new ContentValues();
         values.put(TrackingSessions.START_TIME_TS, entity.getmRawStartTime());
