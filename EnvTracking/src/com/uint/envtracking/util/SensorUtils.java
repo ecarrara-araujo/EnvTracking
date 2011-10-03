@@ -1,7 +1,10 @@
 package com.uint.envtracking.util;
 
 import com.uint.envtracking.R;
+import com.uint.envtracking.sensors.SensorConstants;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.hardware.Sensor;
 
 public class SensorUtils {
@@ -49,6 +52,10 @@ public class SensorUtils {
 		}
 
 		return res;
+	}
+
+	public static SharedPreferences getSharedPreference(Context context) {
+		return context.getSharedPreferences(SensorConstants.PREF_FILE, Context.MODE_PRIVATE);
 	}
 
 }
