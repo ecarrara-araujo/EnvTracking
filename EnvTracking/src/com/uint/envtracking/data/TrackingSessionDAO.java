@@ -11,7 +11,7 @@ import android.database.sqlite.SQLiteDatabase;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TrackingSessionDAO {
+public class TrackingSessionDAO extends AbstractDAO {
     
     private static final String[] ALL_PROJECTION = { TrackingSessions._ID, TrackingSessions.START_TIME_TS, TrackingSessions.END_TIME_TS };
     
@@ -91,11 +91,6 @@ public class TrackingSessionDAO {
         db.update(Tables.TRACKING_SESSIONS, values, where, whereArgs);
         
         return entity;
-    }
-    
-    private static SQLiteDatabase getDatabase(Context context) {
-        EnTDatabaseHelper dbHelper = EnTDatabaseHelper.getInstance(context);
-        return dbHelper.getReadableDatabase();
     }
     
     private static TrackingSession extractEntityFromCursor(Cursor cursor) {

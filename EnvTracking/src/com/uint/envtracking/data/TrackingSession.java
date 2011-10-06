@@ -7,9 +7,8 @@ import java.util.Date;
  * @author ecarrara.araujo
  *
  */
-public class TrackingSession {
+public class TrackingSession extends AbstractEntity {
 
-    private int mId;
     private long mRawStartTime;
     private long mRawEndTime;
     
@@ -47,21 +46,6 @@ public class TrackingSession {
     private void convertDates() {
         mStartTime = new Date(mRawStartTime);
         mEndTime = new Date(mRawEndTime);
-    }
-
-    public int getId() {
-        return mId;
-    }
-    
-    /**
-     * The id will only be updated when the old value was -1.
-     * This must be used only when a new Entity was inserted in the database and an id was generated to it.
-     * @param newId
-     */
-    public void setId(int newId) {
-        if(mId < 0) {
-            mId = newId;
-        }
     }
 
     public long getmRawStartTime() {

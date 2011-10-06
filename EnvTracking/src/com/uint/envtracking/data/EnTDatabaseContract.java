@@ -25,10 +25,11 @@ public class EnTDatabaseContract {
      */
     public interface Tables {
         public static final String TRACKING_SESSIONS = "tracking_sessions";
+        public static final String COLLECTED_RAW_DATA = "collected_raw_data";
     }
     
     /**
-     * Columns of {@link EnvTrackingContract.TrackingSessions} that refer to
+     * Columns of {@link EnTDatabaseContract.TrackingSessions} that refer to
      * properties of the tracking session.
      *
      * @see TrackingSessions
@@ -75,5 +76,73 @@ public class EnTDatabaseContract {
          * The MIME type of a single group.
          */
         public static final String CONTENT_ITEM_TYPE = ContentResolver.CURSOR_ITEM_BASE_TYPE + "/tracking_session";
+    }
+    
+    /**
+     * Columns of {@link EnTDatabaseContract.CollectedRawData} that refer to
+     * properties of the sensor raw data collected by the application.
+     * 
+     * @see TrackingSessions
+     */
+    protected interface CollectedRawDataColumns {
+        
+        /**
+         * The moment that the data was collected.
+         * <P>Type: LONG</P>
+         */
+        public static final String TIMESTAMP = "timestamp";
+        
+        /**
+         * Sensor type, refers to the constants defined in {@Link Sensor} as TYPE_*
+         * <P>Type: INTEGER</P>
+         */
+        public static final String SENSOR_TYPE = "sensor_type";
+        
+        /**
+         * Position in the sensor data array defining the sensor data axis see {@Link SensorEvent.values()}
+         * <P>Type: INTEGER</P>
+         */
+        public static final String SENSOR_DATA_AXIS = "sensor_data_axis";
+     
+        /**
+         * Sensor raw data collected.
+         * <P>Type: REAL</P>
+         */
+        public static final String SENSOR_RAW_DATA = "sensor_raw_data";
+        
+        /**
+         * Id of the related tracking session. See {@link TrackingSessions._ID}
+         * <P>Type: INTEGER</P>
+         */
+        public static final String TRACKING_SESSION_ID = "tracking_session_id";
+        
+    }
+    
+    /**
+     * 
+     * @author ecarrara.araujo
+     *
+     */
+    public static class CollectedRawData implements BaseColumns, CollectedRawDataColumns {
+        
+        /**
+         * This utility class cannot be instantiated
+         */
+        private CollectedRawData()  {}
+        
+        /**
+         * The content:// style URI for this table
+         */
+        public static final Uri CONTENT_URI = Uri.withAppendedPath(AUTHORITY_URI, Tables.COLLECTED_RAW_DATA);
+        
+        /**
+         * The MIME type of a directory of groups.
+         */
+        public static final String CONTENT_TYPE = ContentResolver.CURSOR_DIR_BASE_TYPE + "/collected_raws_datas";
+
+        /**
+         * The MIME type of a single group.
+         */
+        public static final String CONTENT_ITEM_TYPE = ContentResolver.CURSOR_ITEM_BASE_TYPE + "/collected_raw_data";
     }
 }
