@@ -19,6 +19,14 @@
 	<string name="button_cancel">Cancel</string>
 	<string name="button_save">Save</string>
 	<string name="no_sensors_available">No sensors available</string>
+	<string name="button_general_settings">Settings</string>
+	<string name="button_sensors_settings">Sensors</string>
+	<string name="toogle_collect_on">Collect: ON</string>
+	<string name="toogle_collect_off">Collect: OFF</string>
+	<string name="toogle_record_on">Collect: ON</string>
+	<string name="toogle_record_off">Collect: OFF</string>
+	<string name="toogle_record">Record</string>
+	<string name="toogle_collect">Collect</string>
 
 
 </resources>

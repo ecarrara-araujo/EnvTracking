@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="match_parent"
+	android:layout_height="match_parent" android:padding="5dip">
+
+	<fragment android:name="com.uint.envtracking.ui.ControlButtonsFragment"
+		android:id="@+id/fragment_control_buttons" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:layout_alignParentBottom="true"/>
+
+	<fragment android:name="com.uint.envtracking.ui.GraphFragment"
+		android:id="@+id/frag_graph" android:layout_width="fill_parent"
+		android:layout_height="match_parent" android:layout_above="@id/fragment_control_buttons"/>
+
+</RelativeLayout>
