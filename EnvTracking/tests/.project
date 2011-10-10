@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>EnvTrackingTests</name>
+	<name>EnvTrackingTest</name>
 	<comment></comment>
 	<projects>
 		<project>EnvTracking</project>
